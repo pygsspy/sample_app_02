@@ -13,9 +13,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
-  gem 'factory_girl_rails', '4.2.1'
+  gem 'selenium-webdriver', '2.42.0'
+  gem 'capybara', '2.3.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
 end
 
 gem 'sass-rails', '4.0.3'
