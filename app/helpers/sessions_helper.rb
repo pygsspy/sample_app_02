@@ -19,6 +19,10 @@ module SessionsHelper
     @current_user ||= User.find_by(remember_token: remember_token)
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
   def signed_in_user
       unless signed_in?
         store_location
@@ -31,10 +35,6 @@ module SessionsHelper
                                   User.hash(User.new_remember_token))
     self.current_user = nil
     cookies.delete(:remember_token)
-  end
-
-  def current_user?(user)
-    user == current_user
   end
 
   def redirect_back_or(default)
